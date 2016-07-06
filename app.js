@@ -1,5 +1,7 @@
 /**
  * Created by juan on 7/6/2016.
  */
-document.write( "welcome to Big hair contest");
+require( './login');
+
+document.write( "this is cool!");
 console.log( "app loaded" );

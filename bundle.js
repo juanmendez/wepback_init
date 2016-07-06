@@ -42,14 +42,30 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by juan on 7/6/2016.
 	 */
-	document.write( "welcome to Big hair contest");
+	__webpack_require__( 1);
+
+	document.write( "this is cool!");
 	console.log( "app loaded" );
 
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	let login = (username, password)=>{
+	    if( username === "admin" && password === "radical"){
+	        console.log( "login is correct");
+	    }else{
+	        console.log( "incorrect login");
+	    }
+	}
+
+	login( "admin", "idunno");
 
 /***/ }
 /******/ ]);
