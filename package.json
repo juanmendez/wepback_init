@@ -1,0 +1,22 @@
+{
+  "name": "webpack_init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanmendez/wepback_init.git"
+  },
+  "author": "Juan Mendez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanmendez/wepback_init/issues"
+  },
+  "homepage": "https://github.com/juanmendez/wepback_init#readme",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}
