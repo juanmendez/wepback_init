@@ -9,3 +9,9 @@ var stripLoader = {
 
 devConfig.module.loaders.push( stripLoader );
 module.exports = devConfig;
+
+
+/**
+ you run
+ webpack --config webpack-production.config.js -p
+**/
