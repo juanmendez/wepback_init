@@ -1,1 +1,0 @@
-!function(n){function t(r){if(o[r])return o[r].exports;var i=o[r]={exports:{},id:r,loaded:!1};return n[r].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var o={};return t.m=n,t.c=o,t.p="",t(0)}([function(n,t,o){o(2),n.exports=o(3)},function(n,t){"use strict";var o=function(n,t){};o("admin","idunno")},function(n,t,o){o(1),document.write("this is cool!")},function(n,t){}]);

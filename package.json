@@ -24,7 +24,11 @@
     "jshint-loader": "^0.8.3",
     "node-libs-browser": "^1.0.0",
     "strip-loader": "^0.1.2",
+    "typescript": "^1.8.10",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "ts-loader": "^0.8.2"
   }
 }

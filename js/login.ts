@@ -1,4 +1,4 @@
-let login = (username, password)=>{
+let login:Function = (username:string, password:string)=>{
     if( username === "admin" && password === "radical"){
         console.log( "login is correct");
     }else{
@@ -6,4 +6,4 @@ let login = (username, password)=>{
     }
 }
 
-login( "admin", "idunno");
+login( "juan", "mendez" );
