@@ -1,41 +1,26 @@
-var path = require('path');
-
 module.exports = {
-    context: path.resolve( 'js' ),
-    entry: [ "./app.js", "./utils.js"],
+    entry: [ "./app.ts", "./utils.ts"],
     output:{
-        filename: 'bundle.js',
-        path: path.resolve( '/public/build/js/'),
-        publicPath: '/public/assets/js/'
+        filename: 'bundle.js'
     },
-
-    devServer:{
-      contentBase:'public'
-    },
+    watch: true,
 
     module:{
-        preLoaders:[
+        loaders:[
+            {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                loader: "ts-loader"
+            },
             {
                 test: /\.js/,
                 exclude: 'node_modules',
-                loader: 'jshint-loader'
-            }
-        ],
-        loaders:[
-            {
-                test: /\.es6$/,
-                exclude: /node_modules/,
-                loader: "babel-loader"
-            },
-            {
-                test: /\.ts$/,
-                exclude: /node_modules/,
-                loader: "ts-loader"
+                loader: 'jshint-loader',
+                enforce:"pre"
             }
         ]
     },
     resolve:{
-        extensions:['', '.js', '.es6', '.ts' ]
+        extensions:['', '.js', '.ts' ]
     }
-
 }

@@ -6,4 +6,4 @@ let login:Function = (username:string, password:string)=>{
     }
 }
 
-login( "juan", "mendez" );
+export {login};
