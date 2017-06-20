@@ -3,16 +3,15 @@ module.exports = {
     output:{
         filename: 'bundle.js'
     },
-
+    watch:true,
     module:{
-        preLoaders:[
+        loaders:[
             {
                 test: /\.js/,
                 exclude: 'node_modules',
-                loader: 'jshint-loader'
-            }
-        ],
-        loaders:[
+                loader: 'jshint-loader',
+                enforce: "pre"
+            },
             {
                 test: /\.es6$/,
                 exclude: /node_modules/,
@@ -23,5 +22,4 @@ module.exports = {
     resolve:{
         extensions:['', '.js', '.es6' ]
     }
-
 }
