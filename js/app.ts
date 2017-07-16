@@ -5,7 +5,6 @@ import {login} from './login';
 import * as $ from "jquery";
 
 $(()=>{
-    document.write( "working with typescript can be fun!");
-    console.log( "app loaded" );
+    document.write( "hello world!!!!");
 });
 
