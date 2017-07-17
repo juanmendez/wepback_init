@@ -1,7 +1,7 @@
 # wepback_init
 
-###Here is how to add Source Map support
-* webpack -d
-* webserver-dev-server -d
+###Useful commands
+* webpack -d (writes mapping)
+* webpack-dev-server runs the server
+* webpack-dev-server -d (writes mapping)
 * go to `http://localhost:8080/webpack-dev-server/index.html` for auto-refresh
-* sourcecode add debugger

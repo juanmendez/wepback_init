@@ -2,7 +2,8 @@ var path = require("path");
 
 module.exports = {
     context: path.resolve("js"),
-    entry: [ "./app.ts", "./utils.ts"],
+    //we don't need to write the ts file extensions
+    entry: [ "./app", "./utils"],
     output:{
         /**
          * we are not creating the bundle file on the disk!
