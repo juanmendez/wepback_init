@@ -1,8 +1,8 @@
 let login:Function = (username:string, password:string)=>{
     if( username === "admin" && password === "radical"){
-        console.log( "login is correct");
+        return "login is correct";
     }else{
-        console.log( "incorrect login");
+        return "incorrect login";
     }
 }
 

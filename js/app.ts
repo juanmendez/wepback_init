@@ -5,6 +5,6 @@ import {login} from './login';
 import * as $ from "jquery";
 
 $(()=>{
-    document.write( "hello world!!!!");
+    document.write( login("admin", "radical"));
 });
 

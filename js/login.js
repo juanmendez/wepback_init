@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var login = function (username, password) {
     if (username === "admin" && password === "radical") {
-        console.log("login is correct");
+        return "login is correct";
     }
     else {
-        console.log("incorrect login");
+        return "incorrect login";
     }
 };
 exports.login = login;
