@@ -9,7 +9,6 @@ module.exports = {
         /**
          * we are not creating the bundle file on the disk!
          */
-        path: path.resolve('build/js/'),
         publicPath:"/public/assets/js",
         filename: "[name].js"
     },
