@@ -1,5 +1,6 @@
 var path = require("path");
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     context: path.resolve("js"),
@@ -9,7 +10,8 @@ module.exports = {
         /**
          * we are not creating the bundle file on the disk!
          */
-        publicPath:"/public/assets/js",
+        path: path.resolve("build/"),
+        publicPath:"/public/assets",
         filename: "[name].js"
     },
     devServer:{
@@ -17,7 +19,7 @@ module.exports = {
       contentBase:"public"
     },
     watch: true,
-    plugins: [new webpack.optimize.CommonsChunkPlugin('vendor.js')],
+    plugins: [new webpack.optimize.CommonsChunkPlugin('vendor.js'), new ExtractTextPlugin("styles.css")],
     module:{
         loaders:[
             {
@@ -32,11 +34,11 @@ module.exports = {
             },{
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: "style-loader!css-loader"
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             }, {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: "style-loader!css-loader!sass-loader"
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
             }
         ]
     },
