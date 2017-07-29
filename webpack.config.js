@@ -24,12 +24,15 @@ module.exports = {
                 test: /\.tsx?$/,
                 exclude: ['node_modules','typings'],
                 loader: "ts-loader"
-            },
-            {
-                test: /\.js/,
+            }, {
+                test: /\.js$/,
                 exclude: ['node_modules','typings'],
                 loader: 'jshint-loader',
                 enforce:"pre"
+            },{
+                test: /\.css$/,
+                exclude: ['node_modules','typings'],
+                loader: "style-loader!css-loader"
             }
         ]
     },
