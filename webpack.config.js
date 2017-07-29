@@ -31,8 +31,12 @@ module.exports = {
                 enforce:"pre"
             },{
                 test: /\.css$/,
-                exclude: ['node_modules','typings'],
+                exclude: /node_modules/,
                 loader: "style-loader!css-loader"
+            }, {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loader: "style-loader!css-loader!sass-loader"
             }
         ]
     },

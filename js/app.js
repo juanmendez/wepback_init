@@ -3,6 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Created by juan on 7/6/2016.
  */
-require("../css/bootstrap.css");
-require("../css/app.css");
+require("../css/bootstrap.scss");
+require("../css/app.scss");
 //# sourceMappingURL=app.js.map
