@@ -1,41 +1,39 @@
-var path = require('path');
+var path = require("path");
+var webpack = require('webpack');
 
 module.exports = {
-    context: path.resolve( 'js' ),
-    entry: [ "./app.js", "./utils.js"],
+    context: path.resolve("js"),
+    //we don't need to write the ts file extensions
+    entry: {app:"./app", utils:"./utils"},
     output:{
-        filename: 'bundle.js',
-        path: path.resolve( '/public/build/js/'),
-        publicPath: '/public/assets/js/'
+        /**
+         * we are not creating the bundle file on the disk!
+         */
+        publicPath:"/public/assets/js",
+        filename: "[name].js"
     },
-
     devServer:{
-      contentBase:'public'
+        //we serve from public
+      contentBase:"public"
     },
-
+    watch: true,
+    plugins: [new webpack.optimize.CommonsChunkPlugin('vendor.js')],
     module:{
-        preLoaders:[
-            {
-                test: /\.js/,
-                exclude: 'node_modules',
-                loader: 'jshint-loader'
-            }
-        ],
         loaders:[
             {
-                test: /\.es6$/,
-                exclude: /node_modules/,
-                loader: "babel-loader"
+                test: /\.tsx?$/,
+                exclude: ['node_modules','typings'],
+                loader: "ts-loader"
             },
             {
-                test: /\.ts$/,
-                exclude: /node_modules/,
-                loader: "ts-loader"
+                test: /\.js/,
+                exclude: ['node_modules','typings'],
+                loader: 'jshint-loader',
+                enforce:"pre"
             }
         ]
     },
     resolve:{
-        extensions:['', '.js', '.es6', '.ts' ]
+        extensions:['', '.js', '.ts' ]
     }
-
 }

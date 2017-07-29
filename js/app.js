@@ -1,7 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Created by juan on 7/6/2016.
  */
-require( './login');
-
-document.write( "this is cool!");
-console.log( "app loaded" );
+var login_1 = require("./login");
+var $ = require("jquery");
+$(function () {
+    document.write(login_1.login("admin", "radical"));
+});
+//# sourceMappingURL=app.js.map

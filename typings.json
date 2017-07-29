@@ -1,0 +1,8 @@
+{
+  "globalDevDependencies": {
+    "node": "registry:dt/node#7.0.0+20170322231424"
+  },
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20170310222111"
+  }
+}
