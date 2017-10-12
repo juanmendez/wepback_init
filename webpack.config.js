@@ -5,7 +5,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     context: path.resolve("js"),
     //we don't need to write the ts file extensions
-    entry: {app:"./app", utils:"./utils"},
+    entry: {app:"./app"},
     output:{
         /**
          * we are not creating the bundle file on the disk!
@@ -16,7 +16,9 @@ module.exports = {
     },
     devServer:{
         //we serve from public
-      contentBase:"public"
+      contentBase:"public",
+        inline:true,
+        port: 8008
     },
     watch: true,
     plugins: [new webpack.optimize.CommonsChunkPlugin('vendor.js'), new ExtractTextPlugin("styles.css")],
@@ -28,7 +30,7 @@ module.exports = {
                 loader: "ts-loader"
             }, {
                 test: /\.js$/,
-                exclude: ['node_modules','typings'],
+                exclude: [/node_modules/,/typings/],
                 loader: 'jshint-loader',
                 enforce:"pre"
             },{
