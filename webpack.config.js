@@ -17,7 +17,6 @@ module.exports = {
     devServer:{
         //we serve from public
       contentBase:"public",
-        inline:true,
         port: 8008
     },
     watch: true,
